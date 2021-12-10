@@ -1,0 +1,21 @@
+
+.App{
+    display: flex;
+    .Layout{
+        width: 16%;
+        height: 100vh;
+        background-color: #191D2B;
+        position: fixed;
+        border-right: 1px solid #2e344e;
+        display: flex;
+    }
+    .main-content{
+    width: 84%;
+    margin-left: 16%;
+    background-color: #101218;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+}

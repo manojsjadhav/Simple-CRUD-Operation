@@ -1,0 +1,28 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "manoj jadhav",
+      "email": "manoj@gmail.com",
+      "phoneno": "8788770201"
+    },
+    {
+      "id": 2,
+      "name": "pavan",
+      "email": "pavan@gmail.com",
+      "phoneno": "99997764987"
+    },
+    {
+      "name": "some",
+      "email": "sad@gmail.com",
+      "phoneno": "324773225",
+      "id": 3
+    },
+    {
+      "name": "dhoni",
+      "email": "dho@gmail.com",
+      "phoneno": "8998899077",
+      "id": 4
+    }
+  ]
+}
