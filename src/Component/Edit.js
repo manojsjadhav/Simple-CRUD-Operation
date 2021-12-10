@@ -4,21 +4,22 @@ import { getUser } from "./api";
 import { Ediuser } from "./api";
 
 const Edit = () => {
-  const [fullName, setFullName] = useState({
+  const init = {
     name: "",
     email: "",
     phoneno: "",
-  });
-  const history = useHistory();
+  };
+  const [fullName, setFullName] = useState(init);
+  const History = useHistory();
   const { id } = useParams();
 
   useEffect(() => {
     loadUserData();
-  },[] );
+  }, []);
   const loadUserData = async () => {
     const response = await getUser(id);
     setFullName(response.data);
-    console.log(response)
+    console.log(response);
   };
 
   console.log(fullName);
@@ -28,11 +29,10 @@ const Edit = () => {
   };
   const Edituser = async () => {
     await Ediuser(id, fullName);
-    history.push("./Alluser");
-
-    setFullName({ name: "", email: "", phoneno: "" });
+    setFullName({ init: "" });
+    History.push("./Alluser");
   };
-  
+
   return (
     <div className="container">
       <div className="title">Edit User</div>

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
-
 const Adduser = () => {
   const [fullName, setFullName] = useState({
     name: "",
@@ -16,10 +15,11 @@ const Adduser = () => {
     console.log(e.target.value);
     setFullName({ ...fullName, [e.target.name]: e.target.value });
   };
-  const url="http://localhost:3003/user"
+  const url = "http://localhost:3003/user";
   const Submite = async () => {
-    return await axios.post(url, fullName);
-    history.push("./Alluser");
+    await axios.post(url, fullName);
+    setFullName({ name: "", email: "", phoneno: "" });
+    History.push("./Alluser");
   };
   return (
     <div className="container">
